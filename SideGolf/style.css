@@ -1,0 +1,507 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;800;900&family=Poppins:wght@200;300;400;700&family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "montserrat";
+  color: #ffffff;
+  font-weight: 100;
+}
+:root {
+  --p-color: #95c11e;
+  --s-color: #b3e824;
+  --dk-color: #008000;
+  --bcsr-color: #96c11e55;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.csr {
+  height: 25px;
+  width: 25px;
+  background-color: var(--p-color);
+  z-index: 9;
+  border-radius: 50px;
+  position: fixed;
+  transition: all linear 0.1s;
+}
+.back-csr {
+  height: 500px;
+  width: 500px;
+  border-radius: 50%;
+  filter: blur(100px);
+  position: fixed;
+  z-index: 9;
+  transition: all linear 0.2s;
+  background-color: var(--bcsr-color);
+}
+.nav {
+  height: 150px;
+  width: 100%;
+  padding: 5px 150px;
+  gap: 60px;
+  align-items: center;
+  justify-content: flex-start;
+  position: fixed;
+  z-index: 99;
+}
+.nav h4 {
+  color: #ffffff;
+  font-weight: 500;
+}
+.nav img {
+  height: 75px;
+}
+.nav > h4:hover {
+  color: var(--s-color);
+}
+.flex {
+  display: flex;
+}
+video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: fixed;
+  z-index: -1;
+}
+.main {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.sect1 {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  text-align: center;
+  z-index: 10;
+}
+.sect1 h1 {
+  font-size: 140px;
+  font-weight: 900;
+  position: relative;
+}
+.sect1 h1::before {
+  content: "EAT. DRINK. PLAY.";
+  position: absolute;
+  color: black;
+  top: -6px;
+  left: -6px;
+  -webkit-text-stroke: 2px var(--p-color);
+  z-index: -1;
+}
+.sect1 h2 {
+  font-size: 30px;
+  font-weight: 800;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+.sect1 p {
+  font-size: 22px;
+  font-weight: 500;
+  width: 40%;
+}
+.sect2 {
+  min-height: 50vh;
+  width: 100%;
+  z-index: 10;
+}
+.scroller {
+  /* background-color: red; */
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  position: relative;
+  z-index: 10;
+}
+.scroller::-webkit-scrollbar {
+  display: none;
+}
+.scrollerin {
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: scroll;
+  animation-duration: 40s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.scroller h4 {
+  display: inline-block;
+  font-size: 120px;
+  font-weight: 900;
+  font-family: "poppins";
+  margin-right: 20px;
+  transition: all linear 0.3s;
+  color: #000;
+  -webkit-text-stroke: 2px #ffffff;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+.sect3 {
+  margin: 0 100px;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 10;
+}
+
+.iimg0 {
+  height: 220px;
+  width: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+.iimg1 {
+  height: 270px;
+  width: 220px;
+  border-radius: 20px;
+  object-fit: cover;
+}
+
+.text {
+  width: 60%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+.text h3 {
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 50px;
+}
+.text p {
+  font-size: 20px;
+  font-weight: 100px;
+  line-height: 37.6px;
+}
+.container {
+  height: 90vh;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+}
+.card {
+  height: 500px;
+  line-height: 50px;
+  font-weight: 900;
+  width: 514px;
+  background-size: cover;
+  font-size: 40px;
+  align-items: end;
+  justify-content: center;
+  border-radius: 15px;
+}
+#card1 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card2 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+#card3 {
+  background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+.overlay {
+  height: 100%;
+  width: 100%;
+  background-color: #95c11e;
+  padding: 30px;
+  padding-top: 160px;
+  opacity: 0;
+  transition: all ease 0.6s;
+}
+.overlay h4 {
+  border-radius: 15px;
+  color: #000;
+  font-size: 40px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+.overlay p {
+  color: #000;
+  font-size: 18px;
+}
+.card:hover .overlay {
+  opacity: 1;
+}
+.call {
+  height: 40vh;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(
+    to right top,
+    var(--s-color),
+    var(--p-color),
+    var(--dk-color)
+  );
+}
+.call h5 {
+  width: 45%;
+  color: #000;
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  line-height: 36.5px;
+  z-index: 10;
+}
+.call img {
+  height: 100%;
+  object-fit: cover;
+  width: 8%;
+}
+.food {
+  height: 90vh;
+  padding: 115px 130px;
+  margin: 0 15px;
+  justify-content: space-between;
+}
+.half0 img {
+  border-radius: 15px;
+  height: 400px;
+  width: 500px;
+  margin: 0px 20px;
+  flex-direction: row;
+  align-items: center;
+}
+
+.half1 {
+  width: 50%;
+  margin: 100px 0;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.half1 h1 {
+  font-size: 36px;
+  line-height: 47.88px;
+  font-weight: 900;
+}
+.half1 p {
+  font-size: 18px;
+  margin: 20px 0;
+  line-height: 33.84px;
+}
+.half1 button {
+  width: 35%;
+  margin: 30px 0;
+  border-radius: 100px;
+  background-color: #000000;
+  border: 3px solid var(--s-color);
+  color: white;
+  padding: 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14.4px;
+  z-index: 10;
+  transition: all 1s ease;
+}
+.half1 button:hover {
+  color: #000;
+  font-weight: 700;
+  background-color: var(--s-color);
+}
+
+.quote {
+  height: 50vh;
+  width: 100%;
+  background-color: #000;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.quote h3 {
+  font-size: 35px;
+  font-weight: 900;
+  width: 60%;
+  text-align: center;
+  line-height: 37.6px;
+  z-index: 10;
+}
+.quote img {
+  position: absolute;
+  height: 60px;
+}
+.quote .c1 {
+  left: 10%;
+  top: 25%;
+}
+.quote .c2 {
+  bottom: 30%;
+  right: 10%;
+}
+.what {
+  height: 70vh;
+}
+.what h1 {
+  justify-content: center;
+  align-items: center;
+  font-size: 80px;
+  line-height: 200px;
+  text-align: center;
+  font-weight: 900;
+  color: #000;
+  -webkit-text-stroke: 2px #ffffff;
+  font-family: "poppins";
+  position: relative;
+  top: 140px;
+}
+.cta {
+  margin: 58px 130px;
+  justify-content: space-around;
+  align-items: center;
+}
+.crd {
+  background-color: #95c11e;
+  height: 203px;
+  width: 520px;
+  border-radius: 15px;
+  margin: 0 6px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 46px;
+  color: #000;
+  z-index: 10;
+  transition: all ease-in-out 0.7s;
+}
+.cd1:hover {
+  background-image: url(/sidcupfamilygolf/assets/asset\ 9.webp);
+  object-fit: cover;
+  background-size: cover;
+  color: #ffffff;
+}
+.cd2:hover {
+  background-image: url(/sidcupfamilygolf/assets/asset\ 9.webp);
+  object-fit: cover;
+  background-size: cover;
+  color: #ffffff;
+}
+.cd3:hover {
+  background-image: url(/sidcupfamilygolf/assets/asset\ 9.webp);
+  object-fit: cover;
+  background-size: cover;
+  color: #ffffff;
+}
+footer {
+  height: 40vh;
+  width: 100%;
+  padding-top: 115px;
+  background: linear-gradient(
+    to right top,
+    var(--s-color),
+    var(--p-color),
+    var(--dk-color)
+  );
+}
+.ffoot {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+footer .logo-pic {
+  height: 120px;
+  /* opacity: 3; */
+  z-index: 10;
+}
+
+.fp {
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 10;
+}
+.p1 h1 a {
+  color: #000;
+  font-weight: 900;
+  margin: 7px 0;
+  text-decoration: none;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+.p2 h1 a {
+  color: #000;
+  font-weight: 900;
+  margin: 7px 0;
+  text-decoration: none;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+.p3 .black a {
+  color: #000;
+  font-weight: 900;
+  text-decoration: none;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+.p3 h3 a {
+  color: #000;
+  font-weight: 500;
+  margin: 7px 0;
+  text-decoration: none;
+  z-index: 10;
+  transition: all 0.5s ease;
+}
+.p1 h1 a:hover {
+  color: #ffffff;
+}
+.p2 h1 a:hover {
+  color: #ffffff;
+}
+.p3 h3 a:hover {
+  color: #ffffff;
+}
+.copyright{
+  margin: 60px 0px;
+  align-items: baseline;
+  justify-content: space-evenly;
+  z-index: 20;
+
+}
+.copyright .left h1 a{
+  color: #000;
+  font-size: 20px;
+  line-height: 26.3px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 1s ease;
+}
+
+
+.copyright .right h1 a{
+  color: #000;
+  font-size: 20px;
+  line-height: 26.3px;
+  font-weight: 500;
+  text-decoration: none;
+  z-index: 20;
+  transition: all 1s ease;
+
+  
+}
+.left h1 a:hover{
+  color: #ffffff;
+}
+.right h1 a:hover{
+  color: #ffffff;
+}
